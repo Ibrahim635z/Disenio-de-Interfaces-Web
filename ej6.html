@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <style>
+        #table1{
+            
+            width: 50%;
+
+        }
+        #table1 td,#table1 tr{
+            border: 1px solid black;
+            padding: 10px;
+
+           }
+         #table2{
+            
+            width: 50%;
+
+        }
+        #table2 td,#table2 tr{
+            border: 1px solid black;
+            padding: 4px;
+
+           }
+    </style>
+</head>
+<body>
+    <table id="table1">
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"></td>
+                <td rowspan="2"></td>
+            </tr>
+            <tr>
+                <td rowspan="3"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <table id="table2">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <table style="width: 100%">
+                            <tbody style="background-color: yellow;">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <table style="width: 100%">
+                            <tbody style="background-color: yellow;">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <table style="width: 100%">
+                            <tbody style="background-color: yellow;">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+    </table>
+</body>
+</html>
