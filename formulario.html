@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <label for="">Tu nombre: (*)</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <br>
+        <br>
+        <label for="">Correo electrónico: (*)</label>
+        <input type="text" name="correo" id="correo" placeholder="usuario@dominio.com" required>
+        <br>
+        <br>
+        <label for="">Contraseña: (*)</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+        <br>
+        <label for="">Fecha de nacimiento:</label>
+        <input type="date" name="date" id="name">
+        <br>
+        <br>
+        <label for="">¿Que hora es?</label>
+        <input type="time" name="hora" id="hora">
+        <br>
+        <br>
+        <label for="">¿En que mes estamos?</label>
+        <input type="month">
+        <br>
+        <br>
+        <label for="">Selecciona tu personaje preferido</label>
+        <br>
+       
+            <input type="radio" id="Flash" name="lenguaje" value="Flas" required> Flash Gordon
+            <br>
+            <input type="radio" id="Ming" name="lenguaje" value="Ming" > Ming, el despiadado
+            <br>
+            <input type="radio" id="Aura" name="lenguaje" value="Aura" > La Princesa Aura
+            <br>
+            <input type="radio" id="Vultan" name="lenguaje" value="Vultan"> Principe Vultan
+            <br>
+            <input type="radio" id="Dale" name="lenguaje" value="Dale">Dale Arden
+        <br>
+        <br>
+        <label for="">Selecciona tu personaje favorito:</label>
+        <br>
+        <select>
+         <optgroup label="Personajes">
+            <option value="Flash">Flash Gordon</option>
+            <option value="Ming">Ming, el despiadado</option>
+            <option value="Aura">La Princesa Aura</option>
+            <option value="Vultan">Principe Vultan</option>
+            <option value="Dale">Dale Arden</option>
+         </optgroup>
+        </select>
+       <br>
+       <br>
+       <label for="">¿Cuantos comics de Flash Gordon lees a la semana?</label>
+       <br>
+       <input type="range" min="0" max="100" step="10" value="50">
+       <br>
+       <br>
+       <label for="">¿Color ideal de las mayas de Flash Gordon?</label>
+       <br>
+       <input type="color" name="mayas" id="mayas">
+       <br>
+       <br>
+       <label for="">¿Cuantas páginas de comics de Flash Gordon te lees cada dia?</label>
+       <br>
+        <input type="number">
+        <br>
+        <br>
+        <label for="">Descuentos:</label>
+        <br>
+        Familia numerosa <input type="checkbox" id="familia" name="familia"> 
+        <br>
+        Pensionista <input type="checkbox" id="pensionista" name="pensionista">
+        <br>
+        Necesidades especiales <input type="checkbox" id="especiales" name="especiales">
+         <br>
+         <br>
+         <label for="">Elija el archivo</label>
+         <input type="file">
+         <br>
+         <br>
+         <progress id="file" value="70" max="100"> 70% </progress>
+         <br>
+         <br>
+         <input type="submit" value="Enviar los datos">
+         <input type="reset" value="Resetear">
+    </form>
+</body>
+</html>
