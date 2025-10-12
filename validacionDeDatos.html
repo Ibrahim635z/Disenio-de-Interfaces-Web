@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios Validacion de datos</title>
+</head>
+<body>
+    <form action="" method="post">
+        <section>
+            <label for="">Ejercicio 1:  3 letras Exactas</label>
+            <br>
+            <input type="text" pattern="[A-Za-z]{3}">
+        </section>
+        <section>
+            <label for="">Ejercicio 2:   Contraseña de 6 o mas caracteres</label>
+            <br>
+            <input type="password" pattern=".{6,}" >
+        </section>
+        <section>
+            <label for="">Ejercicio 3:  Letras minusculas, con un
+            número opcionalmente de hasta dos dígitos al final. La cadena completa tendrá
+            entre 5 y 12 caracteres.</label>
+            <br>
+            <input type="text" pattern="[a-z]{3,10}[0-9]{2,9}$" >
+        </section>
+        <section>
+            <label for="">Ejercicio 4: campo password, la cual podrá
+            contener letras mayúsculas, minúsculas, números y los caracteres ! ? -. Su
+            tamaño entre 8 y 12 caracteres.
+            </label>
+            <br>
+            <input type="password" pattern="[a-zA-Z0-9\!\?\-]{8,12}">
+        </section>
+        <section>
+            <label for="">Ejercicio 5. Campo que solo permita mayuscula numeros minusculas y 5-40 caracteres</label>
+            <br>
+            <input type="text" pattern="[a-zA-Z0-9]{5-40}">
+        </section>
+        <section>
+            <label for="">Ejercicio 6: modelo de coche A1 A3 A4 A15</label>
+            <br>
+            <label for="">Modelo de coche:</label>
+            <input type="text" pattern="A(1|3|4|15)">
+        </section>
+
+        <section>
+            <label for="">Ejercicio 7 .Patente de auto(3 caracteres seguidos de 3 numeros)</label>
+            <br>
+            <input type="text" pattern="...[0-9]{3}">
+        </section>
+        <section>
+            <label for="">Ejercicio 8. url http o https que despues del // tenga un caracter</label>
+            <br>
+            <input type="text" pattern="[http?://.*]">
+        </section>
+        <section>
+            <label for="">Ejercicio 9. numero entero positivo</label>
+            <br>
+            <input type="text" pattern="[0-9]*">
+        </section>
+        <section>
+            <label for=""> Ejercicio 10. Direccion de correo valida</label>
+            <br>
+            <input type="email" pattern="^[a-zA-Z0-9._%+-]{1,}@[a-zA-Z0-9.-]{1,}\.[a-zA-Z]{2,}$">
+        <section>
+            <label for="">Ejercicio 11. Codigo postal valido</label>
+            <br>
+            <input type="text" pattern="[0-9]{5}">
+        </section>
+        <section>
+            <label for="">Ejercicio 12 .fecha en formato DD/MM/AAAA</label>
+            <br>
+            <input type="text" pattern="^(0[0-9]|[1-2][0-9]|3[0-1])\/(0[0-9]|1[1-2])\/[0-9]{4}$">
+        </section>
+        <section>
+            <label for="">Ejercicio 13. Ingresar un telefono valido</label>
+            <br>
+            <input type="text" pattern="[0-9]{9}">
+        </section>
+        <section>
+            <label for="">Ejercicio  14 contraseña segura: minimo 8 caracteres al menos una mayuscula y un numero</label>
+            <br>
+            <input type="text" pattern="^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$">
+        </section>
+         <section>
+            <label for="">Ejercicio 15: ingresar un numero de tarjeta de credito valido</label>
+            <br>
+            <input type="text" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}">
+        </section>
+        <section>
+            <label for="">Ejercicio 16: ingresar un codigo de pais valido</label>
+            <br>
+            <input type="text" pattern="[A-Z]{2}">
+        </section>
+        <section>
+            <label for="">Ejercicio 17: ingresar Hora valida</label>
+            <br>
+            <input type="text" pattern="(0[0-9]|1[0-9]|2[0-3]):(0[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|)">
+        </section>
+        <section>
+            <label for="">Ejercicio 18: Formato de producto 2 letras y 4 numeros(XX-9999)</label>
+            <br>
+            <input type="text" pattern="([A-Z]{2}|[a-z]{2})-([0-9]{4})">
+        </section>
+        <section>
+            <label for="">Ejercicio 19: Codigo de descuento valido caracteres alfanumericos</label>
+            <br>
+            <input type="text" pattern="([A-F]|[0-9]){5}">
+        </section>
+        <input type="submit">enviar
+    </form>
+</body>
+</html>

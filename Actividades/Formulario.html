@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre (*):</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellidos">Apellidos (*):</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            
+            <label for="dni">DNI (*):</label>
+            <input type="text" id="dni" name="dni" required>
+            <br><br>
+            
+            <label for="localidad">Localidad de Nacimiento:</label>
+            <input type="text" id="localidad" name="localidad">
+            
+            <label for="provincia">Provincia:</label>
+            <select id="provincia" name="provincia">
+                <option value="Huelva">Huelva</option>
+            </select>
+            
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+            <br><br>
+            
+            <label for="direccion">Dirección (*):</label>
+            <input type="text" id="direccion" name="direccion" required>
+            <br><br>
+            
+            <label for="codigo_postal">Código Postal:</label>
+            <input type="text" id="codigo_postal" name="codigo_postal">
+            
+            <label for="email">Email (*):</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telefono">Teléfono (*):</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Forma de Acceso</legend>
+            <input type="radio" id="directo" name="forma_acceso" value="directo">
+            <label for="directo">Directo</label>
+            <br>
+            
+            <input type="radio" id="bachillerato" name="forma_acceso" value="bachillerato">
+            <label for="bachillerato">Bachillerato Log Modalidad</label>
+            <input type="text" id="modalidad_bachillerato" name="modalidad_bachillerato">
+            <br>
+            
+            <input type="radio" id="experimental" name="forma_acceso" value="experimental">
+            <label for="experimental">Experimental</label>
+            <br>
+            
+            <input type="radio" id="cou_opcion" name="forma_acceso" value="cou">
+            <label for="cou_opcion">COU/Opción</label>
+            <input type="text" id="opcion_cou" name="opcion_cou">
+            <br>
+            
+            <input type="radio" id="fp2" name="forma_acceso" value="fp2">
+            <label for="fp2">FP2</label>
+            <br>
+            
+            <input type="radio" id="otros_acceso" name="forma_acceso" value="otros">
+            <label for="otros_acceso">Otros (especifique)</label>
+            <input type="text" id="otros_especifique" name="otros_especifique">
+            <br>
+            
+            <input type="radio" id="prueba_libre" name="forma_acceso" value="prueba_libre">
+            <label for="prueba_libre">Prueba Libre</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Documentos Adjuntados</legend>
+            <input type="checkbox" id="fotocopia_dni" name="documentos[]" value="dni">
+            <label for="fotocopia_dni">Fotocopia DNI</label>
+            
+            <input type="checkbox" id="certificado_academico" name="documentos[]" value="certificado">
+            <label for="certificado_academico">Certificado Académico</label>
+            
+            <input type="checkbox" id="otros_documentos" name="documentos[]" value="otros">
+            <label for="otros_documentos">Otros documentos (especifique)</label>
+            <input type="text" id="especificar_documentos" name="especificar_documentos">
+            <br><br>
+            
+            <label for="adjuntar_documentos">Adjuntar documentos (puedes subir más de uno):</label>
+            <input type="file" id="adjuntar_documentos" name="archivos[]" multiple>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Personalizar</legend>
+            <label for="codigo_personalizado">Código Personalizado:</label>
+            <input type="text" id="codigo_personalizado" name="codigo_personalizado">
+            <br><br>
+            
+            <label for="grupo_curso">Grupo del curso:</label>
+            <input type="text" id="grupo_curso" name="grupo_curso">
+            <br><br>
+            
+            <label for="idioma_certificado">Idioma Certificado:</label>
+            <select id="idioma_certificado" name="idioma_certificado">
+                <option value="ingles">Inglés</option>
+            </select>
+            <br><br>
+            
+            <label for="certificacion_idiomas">Certificación en idiomas:</label>
+            <input type="text" id="certificacion_idiomas" name="certificacion_idiomas">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Otros datos</legend>
+            <label for="comentarios">Indique cualquier otra cosa a tener en cuenta:</label>
+            <br>
+            <textarea id="comentarios" name="comentarios" rows="5" cols="50" placeholder="Déjanos tu comentario"></textarea>
+        </fieldset>
+        
+        <br>
+        <button type="submit">Enviar Solicitud</button>
+        <button type="reset">Resetear</button>
+    </form>
+</body>
+</html>
