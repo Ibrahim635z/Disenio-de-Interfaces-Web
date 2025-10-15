@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        #nombre{
+            background-color: rgb(124, 255, 124);
+        }
+        #edad{
+            background-color: rgb(255, 107, 107);
+        }
+        #nombre:hover{
+            background-color: bisque;
+        }
+        #nombre:focus{
+            background-color: rgb(109, 185, 255);
+        }
+        #hombre:checked + label,#mujer:checked + label{
+            font-style: italic;
+        }
+
+        #agree:checked+label{
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="nombre">Su nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <br>
+
+        <label for="edad">Su edad:</label>
+        <input type="text" name="edad" id="edad">
+        <br>
+        <br>
+        
+        <input type="radio" name="sexo" id="hombre">
+        <label for="hombre">Hombre</label>
+        <br>
+        <input type="radio" name="sexo" id="mujer">
+        <label for="mujer"> Mujer</label>
+        <br>
+        <br>
+        <input type="checkbox" name="agree" id="agree">
+        <label for="agree">Estoy de acuerdo con las condiciones de uso</label>
+    </form>
+</body>
+</html>

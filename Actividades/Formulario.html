@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <style>
+
+    </style>
 </head>
 <body>
+    <h1 style="text-align: center;">HOJA DE INSCRIPCIÓN </h1>
+    <h1 style="text-align: center;">EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
     <form action="" method="post">
-        <fieldset>
-            <legend>Datos Personales</legend>
+        <fieldset style="background-color: #63594D; color: white;">
+            <legend style="border:1px solid black;color: black; background-color: #EAE3D1;">Datos Personales</legend>
             <label for="nombre">Nombre (*):</label>
             <input type="text" id="nombre" name="nombre" required>
             
@@ -24,8 +29,27 @@
             
             <label for="provincia">Provincia:</label>
             <select id="provincia" name="provincia">
+                <optgroup label="Andalucia">
                 <option value="Huelva">Huelva</option>
-            </select>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Cadiz">Cádiz</option>
+                <option value="Malaga">Málaga</option>
+                <option value="Granada">Granada</option>
+                <option value="Cordoba">Córdoba</option>
+                <option value="Jaen">Jaén</option>
+                <option value="Almería">Amería</option>
+                 </optgroup>
+                 <optgroup label="Castilla"></optgroup>
+                 <option value="Avila">Ávila</option>
+                 <option value="Burgos">Burgos</option>
+                 <option value="Leon">León</option>
+                 <option value="Palencia">Palencia</option>
+                 <option value="Segovia">Segovia</option>
+                 <option value="Soria">Soria</option>
+                 <option value="Salamanca">Salamanca</option>
+                 <option value="Valladolid">Valladolid</option>
+                 <option value="Zamora">Zamora</option>
+                </select>
             
             <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
             <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
@@ -36,17 +60,17 @@
             <br><br>
             
             <label for="codigo_postal">Código Postal:</label>
-            <input type="text" id="codigo_postal" name="codigo_postal">
+            <input type="text" pattern="[0-9]{5}" id="codigo_postal" name="codigo_postal">
             
             <label for="email">Email (*):</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" pattern="^[a-zA-Z]+[a-zA-Z0-9._-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" id="email" name="email" required>
             
             <label for="telefono">Teléfono (*):</label>
-            <input type="tel" id="telefono" name="telefono" required>
+            <input type="tel" pattern="[0-9]{9}"  id="telefono" name="telefono" required>
         </fieldset>
         
-        <fieldset>
-            <legend>Forma de Acceso</legend>
+        <fieldset style="background-color: #b18272;">
+            <legend style="border:1px solid black;color: black; background-color: #EAE3D1;">Forma de Acceso</legend>
             <input type="radio" id="directo" name="forma_acceso" value="directo">
             <label for="directo">Directo</label>
             <br>
@@ -78,15 +102,15 @@
             <label for="prueba_libre">Prueba Libre</label>
         </fieldset>
         
-        <fieldset>
-            <legend>Documentos Adjuntados</legend>
-            <input type="checkbox" id="fotocopia_dni" name="documentos[]" value="dni">
+        <fieldset style="background-color: #c2b291;">
+            <legend style="border:1px solid black;color: black; background-color: #EAE3D1;">Documentos Adjuntados</legend>
+            <input type="checkbox" id="fotocopia_dni" name="documentos" value="dni">
             <label for="fotocopia_dni">Fotocopia DNI</label>
             
-            <input type="checkbox" id="certificado_academico" name="documentos[]" value="certificado">
+            <input type="checkbox" id="certificado_academico" name="documentos" value="certificado">
             <label for="certificado_academico">Certificado Académico</label>
             
-            <input type="checkbox" id="otros_documentos" name="documentos[]" value="otros">
+            <input type="checkbox" id="otros_documentos" name="documentos" value="otros">
             <label for="otros_documentos">Otros documentos (especifique)</label>
             <input type="text" id="especificar_documentos" name="especificar_documentos">
             <br><br>
@@ -95,28 +119,33 @@
             <input type="file" id="adjuntar_documentos" name="archivos[]" multiple>
         </fieldset>
         
-        <fieldset>
-            <legend>Personalizar</legend>
+        <fieldset style="background-color: #d6e4c3;">
+            <legend style="border:1px solid black;color: black; background-color: #EAE3D1;">Personalizar</legend>
             <label for="codigo_personalizado">Código Personalizado:</label>
-            <input type="text" id="codigo_personalizado" name="codigo_personalizado">
+            <input type="text" pattern="([A-Z]{3}|[a-z]{3})-([0-9]{4})" id="codigo_personalizado" name="codigo_personalizado">
             <br><br>
             
             <label for="grupo_curso">Grupo del curso:</label>
-            <input type="text" id="grupo_curso" name="grupo_curso">
+            <input type="text" pattern="(A | B | AA | BB | ABA)" id="grupo_curso" name="grupo_curso">
             <br><br>
             
             <label for="idioma_certificado">Idioma Certificado:</label>
             <select id="idioma_certificado" name="idioma_certificado">
                 <option value="ingles">Inglés</option>
+                <option value="Frances">Fránces</option>
+                <option value="Aleman">Alemán</option>
+                <option value="Portugues">Portugués</option>
+                <option value="Italiano">Italiano</option>
+                <option value="Japones">Japones</option>
             </select>
             <br><br>
             
             <label for="certificacion_idiomas">Certificación en idiomas:</label>
-            <input type="text" id="certificacion_idiomas" name="certificacion_idiomas">
+            <input type="text" pattern="(A1|A2|B1|B2|C1|C2)" id="certificacion_idiomas" name="certificacion_idiomas">
         </fieldset>
         
-        <fieldset>
-            <legend>Otros datos</legend>
+        <fieldset style="background-color: #EAE3D1;">
+            <legend style="border:1px solid black;color: black; background-color: #EAE3D1;">Otros datos</legend>
             <label for="comentarios">Indique cualquier otra cosa a tener en cuenta:</label>
             <br>
             <textarea id="comentarios" name="comentarios" rows="5" cols="50" placeholder="Déjanos tu comentario"></textarea>

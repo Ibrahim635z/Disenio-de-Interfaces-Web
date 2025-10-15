@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        section {
+            padding: 10px;
+            border: 2px solid #333;
+            margin-bottom: 30px; 
+        }
+
+        #seccion-uno {
+            width: 300px;
+            height: 150px;
+            background-color: #cceeff; 
+            /* La propiedad 'overflow: hidden' oculta cualquier contenido
+               que se salga del contenedor, tanto horizontal como verticalmente. */
+            overflow: hidden;
+        }
+
+        #seccion-dos {
+            width: 300px;
+            height: 100px;
+            background-color: #d4edda; 
+            overflow-x: scroll;
+            /* Oculta la barra de scroll vertical */
+            overflow-y: hidden;
+        }
+
+        /* Para forzar que el contenido de la sección 2 sea muy ancho,
+           evitamos que el texto salte de línea con 'white-space: nowrap' */
+        #seccion-dos p {
+            white-space: nowrap;
+        }
+
+        #seccion-tres {
+            width: 150px;
+            height: 200px;
+            background-color: #f8d7da; 
+            overflow-x: hidden;
+            /* Muestra la barra de scroll vertical */
+            overflow-y: scroll;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Ejercicio 4: Propiedad Overflow</h1>
+
+    <h2>Contenedor con Overflow (ambos ocultos)</h2>
+    <section id="seccion-uno">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam impedit facilis optio necessitatibus eaque obcaecati nisi rem quos debitis adipisci harum ducimus atque saepe delectus ut, laudantium praesentium?
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum doloribus laudantium, necessitatibus quasi, repellendus eius est ea veritatis hic corrupti reiciendis tempora.
+        </p>
+    </section>
+
+    <h2>Contenedor con Overflow-X (horizontal) visible y Overflow-Y oculto</h2>
+    <section id="seccion-dos">
+        <p>
+             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam impedit facilis optio necessitatibus eaque obcaecati nisi rem quos debitis adipisci harum ducimus atque saepe delectus ut, laudantium praesentium?
+        </p>
+        <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam impedit facilis optio necessitatibus eaque obcaecati nisi rem quos debitis adipisci harum ducimus atque saepe delectus ut, laudantium praesentium?
+        </p>
+    </section>
+
+    <h2>Contenedor con Overflow-Y (vertical) visible y Overflow-X oculto</h2>
+    <section id="seccion-tres">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sed ad consequatur, saepe odio consequuntur corrupti dolorum cumque dicta, doloremque dolorem debitis in, voluptatem eligendi maxime, quasi.
+        </p>
+        <p>
+            Este contenedor es más alto que ancho, y le hemos puesto suficiente texto para que el contenido se desborde hacia abajo.
+        </p>
+        <p>
+            Como puedes ver, la barra de desplazamiento vertical aparece para poder leer todo el contenido que no cabe.
+        </p>
+        <p>
+            Y un último párrafo para asegurar el desbordamiento.
+        </p>
+    </section>
+
+</body>
+</html>

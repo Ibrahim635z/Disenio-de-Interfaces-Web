@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 3</title>
+    <link rel="stylesheet" href="style3.css">
+    <style>
+        body{
+            counter-reset:capitulo;
+        }
+        
+        h2::before{
+            counter-increment: capitulo;
+            content: "Capitulo " counter(capitulo)". ";
+        
+        }
+        h2{
+            counter-reset: sub;
+            color: blue;
+        }
+        h3::before{
+            counter-increment: sub;
+            content: counters(capitulo,".") "." counter(sub) " -";
+        }
+        h3{
+            counter-reset: subsub;
+        }
+        h4::before{
+            counter-increment: subsub;
+            content: counters(capitulo,".") "." counters(sub,".") "." counter(subsub) "-";
+        }
+    </style>
+</head>
+<body>
+    <h1>Manual de Progamacion Web</h1>
+
+    <h2>Introduccion</h2>
+    <h3>Objetivos</h3>
+    <h4>Objetivos generales</h4>
+    <h4>Objetivos especificos</h4>
+
+    <h3>Metodologia</h3>
+    <h4>Enfoque cualitativos</h4>
+    <h4>Tecnicas empleadas</h4>
+
+    <h2>Marco teorico</h2>
+    <h3>Trabajos relacionados</h3>
+    <h4>Investigaciones Previas</h4>
+    <h4>Comparativas relevantes</h4>
+
+    <h3>Conceptos clave</h3>
+    <h4>Definiciones basicas</h4>
+    <h4>Terminos importantes</h4>
+
+    <h2>Resultados</h2>
+    <h3>Experimentos</h3>
+    <h4>Diseño experimental</h4>
+    <h4>Analisis de datos</h4>
+
+    <h3>Conclusiones</h3>
+    <h4>Interpretacion</h4>
+    <h4>Trabajo futuro</h4>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+body{
+    counter-reset:numero_capitulo; /* Se resetea o inicializa, si al final ponemos un espacio y el numero 3 empezara en 3*/
+}
+
+h2::before{
+    counter-increment: numero_capitulo; /* esto funciona como un num++*/
+    content: "Capítulo " counter(numero_capitulo)": "; /* Contenido*/
+}
+

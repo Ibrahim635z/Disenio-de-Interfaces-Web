@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 con Focus</title>
+    <style>
+        
+        a:active {
+            color: green;
+        }
+        
+        /* Oculto el triangulo antes del h3 */
+        h3::before {
+            content: '>'; 
+            color: transparent; /* Lo hacemos invisible */
+        }
+        /*la virulilla sirve para que afecte a todos sus hermanos con ese ID*/
+        #punto1:focus ~ #titulo1 {
+            color: green;
+        }
+        
+        #punto1:focus ~ #titulo1::before {
+            color: green;
+        }
+
+        #punto2:focus ~ #titulo2 {
+            color: green; 
+        }
+        #punto2:focus ~ #titulo2::before {
+            color: green;
+        }
+        
+    </style>
+</head>
+<body>
+<!--Sin esa # en el href la no puede mostrar el triangulo porque se recarga la pagina-->
+    <a href="#" id="punto1">Punto 1</a> | 
+    <a href="#" id="punto2">Punto 2</a>
+
+    <h3 id="titulo1">Punto 1</h3> 
+    <p>Texto del punto 1...</p>
+
+    <h3 id="titulo2">Punto 2</h3>
+    <p>Texto del punto 2...</p>
+
+</body>
+</html>

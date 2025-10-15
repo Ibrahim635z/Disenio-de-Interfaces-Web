@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 Corregido</title>
+    <style>
+        #contenedor {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .forma {
+            width: 150px;
+            height: 75px;
+            background-color: #444;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        #forma-a {
+            border-bottom-right-radius: 50px;
+        }
+
+       
+        #forma-b {
+            border-bottom-right-radius: 40px;
+        }
+        
+
+        #forma-c {
+            border-bottom-right-radius: 30px;
+        }
+
+     
+        #forma-d {
+            width: 200px; 
+            border-radius: 10px 50px 10px 50px;
+        }
+
+        #forma-e {
+            width: 150px;
+            border-radius: 10px 10px 15px 15px;
+        }
+
+     
+        #forma-f {
+            width: 75px; 
+            height: 75px;
+            border-radius: 50%; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejercicio 3:</h2>
+    <div id="contenedor">
+        <div class="forma" id="forma-a">A</div>
+        <div class="forma" id="forma-b">B</div>
+        <div class="forma" id="forma-c">C</div>
+        <div class="forma" id="forma-d">D</div>
+        <div class="forma" id="forma-e">E</div>
+        <div class="forma" id="forma-f">F</div>
+    </div>
+</body>
+</html>

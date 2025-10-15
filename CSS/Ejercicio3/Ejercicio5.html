@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 con @counter-style</title>
+    <style>
+
+        @counter-style flecha-alpha {
+            system: fixed;
+            symbols: " ➡︎ ";
+            suffix: " "; 
+        }
+
+        @counter-style estrellas {
+            system: fixed;
+            symbols: "★" "☆"; /* 1º es ★, 2º es ☆, y los siguientes repiten el ultimo (☆) */
+            suffix: " "; /* Añade un espacio después de la estrella */
+        }
+        
+
+        h1{
+            color: rgb(2, 2, 110);
+            text-decoration: underline;
+        }
+        body{
+            counter-reset: cap 2;
+        }
+        h2::before{
+            counter-increment: cap;
+            content: "Capitulo " counter(cap) " ― " ;
+            color: rgb(2, 2, 110);
+        }
+
+        h2{
+            counter-reset: sub;
+            color: rgb(46, 46, 255);
+        }
+        
+       
+        
+        h3 {
+            counter-reset: contador-flecha subapartado;
+        }
+
+        h3::before{
+            counter-increment: sub contador-flecha;
+            content: counter(cap) "." counter(sub,lower-alpha) " " counter(contador-flecha,flecha-alpha);
+            color: rgb(109, 107, 105);
+
+        }
+
+        h4::before{
+            counter-increment: subapartado;
+            content: counter(subapartado, estrellas);
+            color: rgb(109, 107, 105);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Manual de Progamacion Web</h1>
+<div class="indice">
+
+    <h2>Introduccion</h2>
+    <h3>Objetivos</h3>
+    <h4>Objetivos generales</h4>
+    <h4>Objetivos especificos</h4>
+   
+   
+    
+    <h3>Metodologia</h3>
+    <h4>Enfoque cualitativos</h4>
+    <h4>Tecnicas empleadas</h4>
+
+    <h2>Marco teorico</h2>
+    <h3>Trabajos relacionados</h3>
+    <h4>Investigaciones Previas</h4>
+    <h4>Comparativas relevantes</h4>
+
+    <h3>Conceptos clave</h3>
+    <h4>Definiciones basicas</h4>
+    <h4>Terminos importantes</h4>
+
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        body{
+            counter-reset: cap;
+        }
+        h2::before{
+            counter-increment: cap;
+            content: "Capitulo "  counter(cap)": ";
+            color: blue;
+        }
+        h2{
+            counter-reset: sub;
+        }
+        h3::after{
+            counter-increment: sub;
+            content: "- Subseccion "counters(cap,".") "." counter(sub);
+            color: green;
+        }
+    </style>
+</head>
+<body>
+  <main>
+    <h2>Introducción</h2>
+    <h3>Contexto</h3>
+    <h3>Importancia</h3>
+ 
+    <h2>Desarrollo</h2>
+    <h3>Parte 1</h3>
+    <h3>Parte 2</h3>
+ 
+    <h2>Conclusión</h2>
+    <h3>Resumen</h3>
+  </main>
+</body>
+</html>
