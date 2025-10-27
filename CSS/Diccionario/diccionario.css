@@ -1,0 +1,12 @@
+p{
+    background-color: lightskyblue;
+    position: sticky;
+    top: 20px;
+    height: 25px;
+    font-weight: bold;
+    padding: 25px;
+    
+}
+li{
+    list-style: none;
+}

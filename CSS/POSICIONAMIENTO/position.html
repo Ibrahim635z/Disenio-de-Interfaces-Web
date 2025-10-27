@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .static{
+            background-color: yellow;
+            height: 50px;
+            position: static;/*por defecto es static*/
+            top:100px;
+            left:200px; /*no afecta porque es estatico, de normal las cajas siempre seran estaticas*/
+        }
+        .relative{
+            background-color: turquoise;
+            width: 300px;
+            height: 50px;
+            position: relative;/*se usa cuando lo quiera mover, o si vamos a usar absolute porque dependen de los relative*/
+            top: 20px;
+            left: 100px;
+        }
+
+        .absolute{
+            background-color: tomato;
+            width: 200px;
+            height: 50px;
+            position: absolute;/*desplaza un elemento con relacion a su padre si el padre tiene position relative, 
+            si no tiene es en relacion al html entero*/
+            top: 100px;
+            left: 100px;
+        }
+
+        .relative-parent{
+            background-color: khaki;
+            width: 600px;
+            height: 200px;
+            position: relative;
+            top: 30px;
+            left: 50px;
+        }
+
+        .absolute-child{
+            background-color: lightcoral;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .fixed{
+            background-color: lightgreen;
+            width: 300px;
+            height: 100px;
+            position: fixed; /*se queda en un sitio y se mueve con toda la pagina */
+            top: 100px;
+            left: 400px;
+        }
+        .sticky{
+            background-color: lightblue;
+            position: sticky; /*se queda fijo hasta los 20 px a partir de ahi se comporta como fixed*/
+            top: 20px;
+
+        }
+        .sticky-parent{
+            background-color: coral;
+            height: 600px;
+            border: thin dashed black;
+        }
+        .sticky-child{
+            background-color: lightslategrey;
+            position: sticky; /* se mantendra el sticky hasta que desaparece el padre.*/
+            top: 75px;
+        }
+        .z-index1,
+        .z-index2{
+            background-color: mediumorchid;
+            width: 200px;
+            height: 200px;
+            border: thin solid black;
+            position: relative;
+        }
+        .z-index2{
+            bottom: 200px;
+            left: 100px;
+            z-index: 1;/* por defecto el valor es 0*/
+            background-color: aqua;
+        }
+        .z-index1{
+            z-index: 2;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>POSICIONAMIENTO EN CSS</h1>
+    <div class="static">Caja Estática</div>
+    <div class="relative">Caja Relativa</div>
+    <div class="absolute">Caja Absoluta</div>
+    <section class="relative-parent">
+        <div class="absolute-child">Caja Absoluta con Ancestro Relative</div>
+    </section>
+
+    <br><br><br>
+
+    <div class="fixed">Caja Fija</div>
+    <div class="sticky">Caja Pegajosa</div>
+
+    <section class="sticky-parent">
+        <br><br><br>
+        <div class="sticky-child">Caja Pegajosa como hijo</div>
+    </section>
+    <br><br><br><br><br>
+
+
+    <div class="z-index1">Probando z-index caja 1</div>
+    <div class="z-index2">Probando z-index caja 2</div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

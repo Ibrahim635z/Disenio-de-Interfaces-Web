@@ -1,0 +1,26 @@
+p {
+    color: purple;
+    border: dotted;
+}
+
+.a {
+    display: none;
+}
+
+.b {
+    width: 100px; /* no es necesario al poner el inline se adapta al texto*/
+    height: 50px;
+    display: inline;
+}
+
+.c {
+    /*coge todo el ancho del navegador por tanto si le valdria ponerle widh y height*/
+    display: block;
+}
+
+.d {
+    /* te deja modificar el tamaño y ademas te los pone en linea*/
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+}

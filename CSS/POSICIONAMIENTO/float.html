@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        .a div{
+            background-color: blue;
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 3px;
+            margin: 3px;
+        }
+        .a {
+            float: left; /*se van a la izquierda encima de cualquier cosa*/
+        }
+        .b div{
+            background-color: lightgreen;
+            width: 100px;
+            height: 100px;
+             padding: 3px;
+            margin: 3px;
+        }
+        .b {
+            float: right;
+        }
+        .c div{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+             padding: 3px;
+            margin: 3px;
+        }
+        .c {
+            float: left;
+        }
+        .d div{
+            background-color: lightpink;
+            width: 100px;
+            height: 100px; 
+            padding: 3px;
+            margin: 3px;
+
+        }
+        .d {
+            clear:both/* esto hace q no se vuelva loco y se adapte al contenido de los float*/
+        }
+    </style>
+</head>
+<body>
+    <div class="a"><div>A</div></div>
+    <div class="a"><div>A'</div></div>
+    <div class="b"><div>B</div></div>
+    <div class="b"><div>B'</div></div>
+    <div class="c"><div>C</div></div>
+    <div class="d"><div>D</div></div>
+</body>
+</html>
