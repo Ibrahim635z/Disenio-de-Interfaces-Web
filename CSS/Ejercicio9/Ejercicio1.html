@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        #grad1{
+            height: 100px;
+            width: 800px;
+            background: linear-gradient(to top, pink,purple);
+            background-clip: text;
+            color: transparent;
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 10%;
+        }
+
+        #grad2{
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: linear-gradient(to right,black,blue,yellow,green,red);
+        }
+        #grad3{
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: repeating-linear-gradient(to bottom, 
+            blue 0px, blue 20px,
+            yellow 20px, yellow 40px,  
+            red 40px, red 60px 
+            );
+
+        }
+        #grad4{
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: radial-gradient( ellipse,yellow,red,black);
+        }
+         #grad5{
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: radial-gradient( ellipse,yellow 180px,red 200px,black);
+        }
+        #grad6{
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: radial-gradient( circle,yellow 180px,red 200px,black);
+        }
+         #grad7{
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: radial-gradient( circle at center left,yellow 250px,red 300px,black);
+        }
+        #grad8{
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: radial-gradient( circle,rgb(3, 3, 165) ,purple,red,orange,yellow);
+        }
+        #grad9{
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: radial-gradient( ellipse at center,rgb(3, 3, 165) 5%,purple 15%,red 30%,orange 50%,yellow 60%);
+        }
+        #grad10{
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: radial-gradient( circle 200px at center,rgb(3, 3, 165) 10%,purple 45%,red 75%,orange 95%,yellow 100%);
+        }
+        #grad11 {
+    /* Patrón de anillos concéntricos rojos (Imagen 1) */
+    margin-bottom: 10%;
+    height: 200px;
+    width: 500px;
+    /* Se utiliza repeating-radial-gradient para los anillos concéntricos */
+    background: repeating-radial-gradient(
+        circle,
+        #ff3333  0%, 
+        #ff3333  10%,
+        red 10%, 
+        red 20%,
+        #b20000 20%, 
+        #b20000 30%
+    );
+}
+  #grad12 {
+            margin-bottom: 10%;
+            height: 200px;
+            width: 500px;
+            background: conic-gradient(
+                at top center,
+                #000066 0deg,
+                #000099 60deg,
+                #0000ff 120deg,
+                #0000cc 180deg,
+                #000099 240deg,
+                #000066 300deg,
+                #000033 360deg
+            );
+        }
+
+        /* --- Gradiente 13: multicolor desde el centro --- */
+         #grad12 {
+    margin-bottom: 10%;
+    height: 200px;
+    width: 500px;
+    background: conic-gradient(
+        at top center,
+        #000066 0deg,
+        #000099 60deg,
+        #0000cc 120deg,
+        #0000ff 180deg,
+        #0000cc 240deg,
+        #000099 300deg,
+        #000066 360deg
+    );
+}
+
+/* --- Gradiente 13: multicolor difuminado desde el centro --- */
+#grad13 {
+    margin-bottom: 10%;
+    height: 200px;
+    width: 500px;
+    background: conic-gradient(
+        from 0deg,
+        yellow 0deg,
+        red 40deg,
+        blue 60deg,
+        yellow 80deg,
+        red 100deg,
+        blue 120deg,
+        yellow 140deg,
+        red 160deg,
+        blue 180deg,
+        yellow 200deg,
+        red 220deg,
+        blue 240deg,
+        yellow 260deg,
+        red 280deg,
+        blue 300deg,
+        yellow 360deg
+
+    );
+}
+
+    </style>
+</head>
+<body>
+    
+    <div id="grad1">Diseño de Interfaces Web</div>
+    <div id="grad2"></div>
+    <div id="grad3"></div>
+    <div id="grad4"></div>
+    <div id="grad5"></div>
+    <div id="grad6"></div>
+    <div id="grad7"></div>
+    <div id="grad8"></div>
+    <div id="grad9"></div>
+    <div id="grad10"></div>
+    <div id="grad11"></div>
+    <div id="grad12"></div>
+    <div id="grad13"></div>
+</body>
+</html>
