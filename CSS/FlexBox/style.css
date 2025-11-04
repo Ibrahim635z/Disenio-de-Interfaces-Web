@@ -1,0 +1,51 @@
+section{
+    width: auto;
+    height: 1000px;
+    border: 2px solid black;
+    padding: 5px;
+    /* display: inline-flex; siempre se le pone al padre, inline flex la caja se adapta*/
+    display: flex;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap; por defecto no-wrap (no envuelto)*/
+    flex-flow: row wrap;/* asi se usan las dos anteriores juntas*/
+    justify-content: center;/*alinea los alimentos en funcion del eje que le digamos o tenga*/
+    align-items: flex-start;  /*Se alinea el contenido de la caja con baseline
+   /* align-content: flex-start;/*alinea las lineas imaginarias y allign item alinea los elementos en sus filas*/
+}
+
+.cajas {
+
+    border: 4px solid black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em ;
+    padding: 20px;
+    margin: 10px;
+}
+
+.red{
+    background-color: red;
+    /*flex-grow: 3;*/
+    order: 1;
+    align-self: center;
+}
+
+.yellow{
+    background-color: yellow;
+    /*flex-shrink: 1; /*se encoge*/
+    /*flex-basis: 200px; /*Da tamaña al width o height en funcion de flexbox*/
+    order: 3;
+}
+
+.blue{
+    background-color: blue;
+    /*flex-grow: 2;/* divide el sobrante en la suma de todos y da la parte que has puesto a cada uno*/
+    
+}
+
+.green{
+    background-color: green;
+    /*flex-grow: 1;*/
+    order: -1;
+    align-self: flex-end;
+}

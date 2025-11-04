@@ -1,0 +1,156 @@
+body{
+    height: 2000px;
+    margin: 0; 
+    padding: 0;
+}
+.nav{
+    width: 100%; 
+    height: 40px; 
+    background-color: #f3e6d6; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 5; 
+    display: flex; 
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Separa elementos izquierda y derecha */
+}
+
+.nav > ul{
+    list-style: none; 
+    height: 100%;
+    display: flex; /* Distribuye elementos en línea */
+    align-items: center; 
+    margin: 0; /* Elimina márgenes */
+    padding: 0;
+    padding-left: 300px; 
+}
+
+.nav > ul > li{
+    position: relative; /* Permite posicionar submenús */
+    padding: 0 25px; 
+    height: 60%; /* cuadrado iliberis*/
+    display: flex; /* Para centrar el texto */
+    align-items: center; /* Centra verticalmente */
+    font-weight: bold;
+}
+.nav > ul > li:hover{
+    cursor: pointer;
+    background-color: blue;
+}
+.iliberis{
+    background-color: rgb(255, 73, 73);
+    color: white;
+    height: 20px;
+    padding: 5px 15px; /* Padding interno para que el texto no esté pegado */
+    box-shadow: 0px 0px 1px black inset;
+    display: flex; /* Para centrar el texto */
+    align-items: center; /* Centra verticalmente */
+}
+
+.nav ul ul{
+    display: none; 
+    position: absolute; 
+    top: 100%; /* Aparece debajo del elemento padre */
+    left: 0; /* Alineado a la izquierda del padre */
+    background-color: #f3e6d6;
+    padding: 0; 
+    min-width: 150px; 
+    list-style: none; 
+}
+
+.nav ul ul ul{
+    top: 0px; /* Alineado arriba con el elemento padre */
+    left: 100%; /* lo ponemos a la derecha del padre */
+}
+
+.nav ul ul ul ul{
+    top: 0px; /* Alineado arriba con el elemento padre ISO */
+    left: 100%; /* Aparece a la derecha del elemento ISO */
+}
+
+.nav li.segundoDaw > ul{
+    top: 0px; 
+    left: 100%;
+    background-color: aqua;
+    position: absolute; 
+}
+
+.nav li:hover > ul{
+    cursor:pointer;
+    display: block;
+}
+
+.nav li li{
+    padding: 8px 15px; /* Espaciado interno */
+    background-color: #00ff00;
+    font-weight: bold;
+    position: relative; /* Permite posicionar sub-submenús */
+}
+
+.nav li li li{
+    padding: 8px 15px; 
+    background-color: #00ff00;
+    font-weight: bold;
+    position: relative; 
+}
+
+.nav li li:hover{
+    color: black;
+    background-color: blue;
+    font-weight: bold;
+}
+
+.icono {
+    display: inline-block; /* Permite que el enlace se comporte como bloque */
+    height: 80%; 
+    margin-right: 350px; 
+}
+
+.icono img {
+    height: 100%; /* La imagen ocupa toda la altura del enlace */
+    width: auto; /* Mantiene proporción */
+}
+
+.contenido{
+    margin-top: 20%; 
+    position: relative;
+}
+
+.contenido img{
+    width: 100%; 
+    display: block; 
+}
+
+.contenido p{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0;
+    width: 100%; /* Ancho completo para centrar */
+    text-align: center; /* Centra el texto */
+}
+
+.contenido p:first-of-type{
+    top: 30%; 
+}
+
+.contenido p:nth-of-type(2){
+    top: 40%; 
+}
+
+.boton{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    margin-left: -80px; /* Centra el botón */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(255, 73, 73);
+    color: white;
+    padding: 5px 15px;
+    box-shadow: 0px 0px 1px black inset;
+    text-align: center;
+}
