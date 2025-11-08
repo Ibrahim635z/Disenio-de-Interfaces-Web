@@ -9,6 +9,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "fajala";
+    src:url(assets/fonts/FjallaOne-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* ESTILOS GENERALES */
 
@@ -140,22 +146,31 @@ header {
 }
 /* BARRA LATERAL */
 
-#aside{
+#aside,
+#frase{
     width: 200px;
     float: left;
     margin: 30px;
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0px 2px 2px #ccc;
-    text-align: center;
+   /* text-align: center;*/
+}
+#frase{
+    /*clear: both;*/
+    width: 180px;
+    padding: 10px;
+    font-size: 14px;
+
 }
 
 #aside .widget{
     display: block;
     width: 180px;
-    padding: 8px ;
+    padding: 8px 10px;
     font-size: 14px;
     border-bottom: 1px dashed #333;
+    margin: 5px auto;
 
 }
 #aside .widget:last-child{
@@ -163,7 +178,8 @@ header {
 }
 
 #aside h3{
-    width: 180px;
+    display: block;
+    width: 100%;
     color: #333;
     text-align: center;
     padding-top: 2px;
@@ -201,7 +217,8 @@ input[type="submit"]{
     cursor: pointer;
     padding: 3px;
     margin: 0px auto; 
-    margin-top: 5px;  
+    
+    
 }
 
 input[type="submit"]:hover{
@@ -211,6 +228,7 @@ input[type="submit"]:hover{
 
 input[type="submit"]:active{
     text-shadow: 0px 0px 1px #ccc;
+    text-shadow: 0px 0px 1px gray inset;
 }
 
 #aside div label,
@@ -221,4 +239,72 @@ input[type="submit"]:active{
     width: 95%;
     margin-top: 3px;
     margin-bottom: 3px;
+}
+
+#aside input,
+#aside label{
+    margin: 0px;
+    text-align: center;
+}
+
+#aside div input[type="submit"]  {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    color: #529125;
+}
+
+a:visited{
+    color: #529125;
+}
+
+a:hover{
+    color: #285616;
+}
+
+.red{
+    color: #9b2422 !important;
+}
+
+.blue{
+    color: blue !important
+}
+
+#aside li{
+    list-style: square;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+/*SECCIONES*/
+#sections{
+    float: right;
+    width: 75%;
+    font-family: sans-serif;
+}
+
+#sections .titulo{
+    font-family: "fajala";
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: -20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#sections section {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    font-size: 16px;
 }
