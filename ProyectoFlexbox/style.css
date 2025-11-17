@@ -1,0 +1,309 @@
+
+body{
+font-family: "Open Sans", sans-serif;
+}
+/* Contenedor Principal */
+
+.hero-container {
+  
+    background-image:linear-gradient(to left top, rgba(55,185,30,0.83), rgba(25,59,240,0.83)),url('./images/fondo_superior.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    padding: 30px 60px; 
+    height: auto;
+}
+
+
+/*El Encabezado*/
+
+.hero-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.top-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+
+/*El Cuerpo Principal(Las 2 columnas)*/
+
+.hero-body {
+    display: flex;
+    justify-content: space-between; 
+    gap: 40px; 
+    margin-top: 50px; 
+    align-items: flex-start; 
+}
+
+.hero-content {
+    flex: 1; /* Ocupa el espacio restante /
+    /* background-color: rgba(255, 0, 0, 0.2); */ 
+}
+
+.hero-content h2 {
+    font-size: 2.8em; 
+    margin-top: 0;
+    font-family: Arial, Tahoma, Verdana;
+}
+
+.hero-content .fa-circle-check {
+    margin-right: 10px;
+    color: white;
+}
+
+/* Columna derecha: Formulario */
+.hero-form {
+    flex-basis: 400px; 
+    background-color: rgba(0, 0, 0, 0.75); 
+    padding: 25px;
+    color: white;
+}
+
+.hero-form h3 {
+    margin-top: 0;
+}
+
+.hero-form label {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.hero-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.hero-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.hero-form .privacidad {
+    font-size: 0.8em;
+    text-align: center;
+    color: #ddd;
+    margin-top: 15px;
+}
+
+/*PARTE DE ICONOS*/
+.iconos{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icono-item {
+   /* apila los elementos hijos (icono y texto) verticalmente */
+    display: flex;
+    flex-direction: column;
+    /* Centra el icono y el texto horizontalmente */
+    align-items: center; 
+    width: 20%; 
+}
+
+.icono-item i {
+    /* Aumentar el tamaño del icono */
+    font-size: 3rem; 
+    color: 	#13a3db ;
+    border: 2px solid #b3e5fc; /* Borde azul claro y delgado */
+    border-radius: 50%;       /* Círculo perfecto */
+    /* Tamaño fijo para el círculo */
+    width: 100px;
+    height: 100px;
+    /* Esto centra el icono DENTRO del círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono-item p {
+    margin-top: 15px; 
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;   
+}
+
+/*SECCION 3 TEXTO Y VIDEO*/
+.seccion3 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(199, 199, 199, 0.411); 
+    align-items: center; 
+    margin-top: 100px;
+    padding: 60px 80px;
+    gap: 30px;
+}
+
+.parte1 {
+    width: 50%;
+}
+
+/* Estilos de texto  */
+.parte1 p:first-child {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Estilos del botón */
+.parte1 button {
+    background-color: green;
+    color: white;
+    width: auto; 
+    padding: 15px 30px; 
+    font-size: 1rem;
+    width: 50%;
+}
+.parte1 button:hover {
+    box-shadow: 0px 0px 3px black inset;
+}
+
+.parte2 {
+    width: 50%;
+   
+}
+
+.parte2 video {
+    width: 100%; 
+    height: auto;
+}
+
+/*Staff de Instructores*/
+
+.titulo-staff{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}    
+.staff{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.instructor-card{
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-card img{
+    width: 100%;
+    height: auto;
+}
+
+.instructor-card i{
+    color: #107ba7;
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+
+.instructor-card p:nth-child(2){
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+
+
+.seccion-final {
+    background-image: linear-gradient(to left top, rgba(16,123,167,0.8), rgba(16,123,167,0.8)),url('./images/fondo_inferior.jpg'); 
+    background-size: cover;     /* Cubre todo el espacio */
+    background-position: center; /* Centra la imagen */
+    padding: 80px 20px; 
+    color: white;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.seccion-final h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px; 
+}
+
+.seccion-final p {
+    font-size: 1.1em;
+    margin-bottom: 25px; 
+    max-width: 500px; 
+}
+
+.boton-final {
+    display: inline-block;
+    background-color: #5cb85c; 
+    color: white;
+    padding: 12px 28px;
+    font-weight: bold;
+    text-decoration: none; 
+    border-radius: 5px;
+}
+
+.boton-final:hover {
+    background-color: #4cae4c; 
+}
+
+.footer {
+    background-color: #333; 
+    color: #f0f0f0;       
+    padding: 25px 50px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; /* Para que se vea bien en móviles */
+    gap: 20px;       
+}
+
+.footer nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    
+    display: flex; 
+    gap: 20px;     
+}
+
+.footer nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer nav a:hover {
+    text-decoration: underline; 
+}
+
+.footer .copyright {
+    margin: 0; 
+    font-size: 0.9em;
+}
