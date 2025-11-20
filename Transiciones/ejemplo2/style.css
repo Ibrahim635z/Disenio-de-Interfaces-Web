@@ -1,0 +1,55 @@
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.caja{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border-top: 0.3em solid transparent;
+    position: relative;
+}
+
+
+.caja1{
+    color: yellow;
+    box-shadow: 0px 10px 0px 0px yellow;
+    transition: box-shadow 1s ease;
+   
+}
+
+.caja1:hover{
+    box-shadow: inset 0 0 0 100px yellow;
+   
+}
+
+
+.caja2{
+    color: red;
+    border-top: 0.3em solid red;
+    transition: border-top 1s ease;
+}
+
+.caja2:hover{
+
+}
+
+
+.caja3{
+    color: #18a718;
+}
+
+.caja3:hover{
+
+}
+
+.caja4{
+    color: #9b2a9b;
+}
+
+.caja4:hover{
+
+}
