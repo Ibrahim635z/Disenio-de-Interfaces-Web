@@ -1,0 +1,52 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    width: 50%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 1fr;
+}
+
+
+.contenedor img{
+    grid-row: 1;
+    width: 100%;
+    grid-column: 1/9;
+    
+}
+
+
+.contenedor .tarjeta-info{
+    font-size: 1.2em;
+    background-color: #2658e4;
+    color: white;
+    grid-row: 1;
+    grid-column: 7/-1;
+    padding: 40px;
+    z-index: 2;        
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: #2658e4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.boton:hover{
+    transition:1s ease-out;
+    background-color: #e60707;
+    color: white;
+    box-shadow: 5px 5px 5px 2px rgba(255, 255, 255, 0.911);
+    border-radius: 10px;
+}

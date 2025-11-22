@@ -1,0 +1,51 @@
+body{
+background-color: #f4f4f4;
+}
+
+
+.contenedor{
+    min-width: 50%;
+    max-width: 60%;
+    background-color: white;
+    
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+    
+    margin-top: 50px; /* Ajustado para que se vea en pantalla */
+    margin-left: auto; /* Centrado horizontal */
+    margin-right: auto;
+    display: grid;
+
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 1fr 50px repeat(5,1fr);
+  
+
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+}
+
+.contenedor .item{
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    padding: 15px;
+    color: #666; 
+    
+}
+
+.contenedor .dia-semana{
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: #666;
+}
+
+.contenedor .mes{
+    color: #666;
+    font-size: 1.5em;
+    grid-column: 1/8;
+    text-align: center;
+    line-height: 100px;
+}
+

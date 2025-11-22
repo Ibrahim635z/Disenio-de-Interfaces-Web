@@ -1,0 +1,115 @@
+.contenedor{
+    width: 90%;
+    height: auto;
+    
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px 5px;
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* asi la adapto al tamaño de mi caja*/
+
+}
+
+
+
+.titulo1 {
+    position: relative;  /*  ::after se posicione relativamente a este elemento */
+    font-size: 1.5rem; 
+    padding-bottom: 10px;
+}
+
+.titulo1::after {
+    content: "";     /* Propiedad obligatoria para que el pseudo-elemento exista */
+    /* 3. Estilos de la línea */
+    height: 3px;    /* El grosor de la línea */
+    width: 150px;   /* El ancho que viste en tu imagen */
+    background-color: #e0242a; /* El color rojo */
+    
+    /* 4. Posicionamiento de la línea */
+    position: absolute;
+    bottom: 0;      /* Para que esté justo en la parte inferior del h2 */
+    left: 0;        /* Para que empiece desde la izquierda */
+}
+
+
+
+
+.contenedor2{
+    width: 90%;
+    height: 400px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,200px);
+    grid-template-rows: repeat(4,200px);
+
+    grid-template-areas: 
+    "item1 item2 item2 item3"
+    "item4 item4 item5 item3"
+    "item4 item4 item6 item6"
+    "item7 item8 item8 item8"
+    ;
+    gap: 10px;
+    
+}
+.contenedor2 .img {
+    width: 100%; 
+    height: 100%;
+    overflow: hidden; /* Propiedad clave para el recorte: oculta el exceso de la imagen */ 
+}
+.contenedor2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* que se adapte lo recortado*/ 
+}
+.contenedor2 .img1{
+    grid-area: item1;
+}
+
+.contenedor2 .img2{
+    grid-area: item2;
+}
+
+.contenedor2 .img3{
+    grid-area: item3;
+}
+.contenedor2 .img4{
+    grid-area: item4;
+}
+.contenedor2 .img5{
+    grid-area: item5;
+}
+.contenedor2 .img6{
+    grid-area: item6;
+}
+.contenedor2 .img7{
+    grid-area: item7;
+}
+.contenedor2 .img8{
+    grid-area: item8;
+}
+
+.titulo2{
+    font-size: 1.5em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.titulo2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+
+    background-color: #e0242a;
+    width: 150px;
+    height: 5px;
+
+}
