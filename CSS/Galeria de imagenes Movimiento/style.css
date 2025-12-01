@@ -1,0 +1,132 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin: 30px auto;
+    font-family: sans-serif;
+}
+
+/* --- TÍTULO --- */
+h3 {
+    position: relative;
+    font-size: 2em;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3::after {
+    content: "";
+    background-color: rgb(68, 68, 255);
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+}
+
+/* --- GRID DE LA GALERÍA --- */
+.container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+/* Estilo para el contenedor de cada item */
+.gallery-item {
+    position: relative; /* Necesario para posicionar la capa azul */
+    overflow: hidden;   /* Para que nada se salga de los bordes */
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- EFECTO HOVER AZUL --- */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    background-color: rgba(0, 0, 255, 0.4); 
+    transition: clip-path 0.3s ease;
+    cursor: pointer;
+}
+
+
+.gallery-item:hover .overlay {
+    
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+
+}
+
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3; 
+    
+    /* Efecto de entrada (deslizar desde la derecha) */
+    transform: translateX(100%); 
+    transition: transform 0.5s ease;
+    
+    /* Para que no bloquee clicks cuando está oculto */
+    visibility: hidden; 
+}
+
+/* Cuando el ID del lightbox coincide con la URL (#img1, etc.) */
+.lightbox:target {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh; /* Altura máxima del 80% de la ventana */
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Botón cerrar */
+.close {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background: crimson;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}

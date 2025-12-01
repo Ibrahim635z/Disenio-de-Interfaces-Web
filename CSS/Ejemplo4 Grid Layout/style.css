@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: sans-serif;
+}
+
+#container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    position: relative;
+}
+
+#container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5856D6;
+    z-index: 0;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+#formulario {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    left: 20%;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h3::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 70px;
+    background-color: #5856D6;
+    left: 0;
+    bottom: 0;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    background-color: #5856D6;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+#imagen img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #container::before {
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    #imagen {
+        height: 300px;
+        order: -1;
+    }
+}
