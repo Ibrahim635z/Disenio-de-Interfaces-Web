@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+/* Zona 1 */
+
+.zona1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #f2e4d8;
+    align-items: center;
+    gap: 300px;
+   
+}
+
+
+
+.texto{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-left: 100px;
+
+    animation: zona1-left 2s ease;
+   
+}
+
+
+.texto h3{
+    font-size: 4em;
+    color: #8c0f31;
+   
+}
+
+.texto p{
+    font-size: 2em;
+    color: #8c0f31;
+    font-weight: bold;
+   
+}
+.imagen1{
+    width: 50%;
+   
+    animation: zona1-right 2s ease;
+}
+.imagen1 img{
+    width: 70%;
+    
+   
+}
+
+@keyframes zona1-left{
+    from{
+        transform: translateY(140%);
+        opacity: 0.1;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes zona1-right{
+    from{
+        transform: translateX(90%);
+        opacity: 0.1;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+.zona1-5{
+    width: 100%;
+    height: 20vh;
+    margin-left: 15%;
+    margin-top: 2%;
+   
+   
+}
+
+.zona1-5 button{
+    padding: 1%;
+    width: 15%;
+    border-radius: 5px;
+     background-color: white;
+    color: #8c0f31;
+    font-size: 1rem;
+    font-weight: bold;
+     position: relative;
+     overflow: hidden;
+}
+
+.zona1-5 button::before{
+     position: absolute;
+    content: "Para ver más pulsa";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8c0f31;
+    color: white;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    transition: clip-path 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+
+}
+.zona1-5 button:hover::before{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* SECCION 2 GALERIA DE IMAGENES*/
+/* .zona2 {
+    width: 80%;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;          
+    display: flex;     
+    flex-direction: column;  
+    align-items: center;   
+    justify-content: center; 
+}
+
+
+a{
+    
+    transicion transf 1s 
+    animation : loquesea 
+& hover{
+
+}
+
+    }
+a:hover{
+transform: rotare 30 
+
+}
+
+keyframe{
+
+gallery{
+wid 100
+galerry_card{
+ wid 30
+ 
+galery card : befor{
+content. 
+
+clip 0
+transition: all;
+
+galere card:hover::before{
+clip bue
+
+
+pulsar target
+
+.zona2 button:hover::after{
+    cursor: pointer;
+    clip-path: circle(140.1% at 0% 1%);
+}
+
+.zona2 h3{
+    text-align: center;
+    padding-top: 5%;
+    font-size: 2rem;
+   
+}
+.zona2 p{
+   text-align: center;
+   margin-top: 1%;
+   color: #f2e4d8;
+
+}*/
+
+
+.zona2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zona2 .gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:80%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.zona2 .gallery .gallery__card{
+    width: 30%;
+    position: relative;
+    
+}
+
+.zona2 .gallery .gallery__card img{
+    width: 100%;
+}
+
+.gallery__card::before{
+    content: "ksndfkljhsoiefnd";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50vh;
+    color: white;
+    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+    background-color: #b3395a75;
+    transition: all 1s ease;
+}
+
+.gallery__card:hover::before{
+   
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/*Seccion 3 Zona3 tabla de precios */
+
+.zona3{
+    margin-top: 10%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color:#f2e4d8;
+    
+}
+.zona3 h3{
+    text-align: center;
+    padding-top: 2%;
+    font-size: 2rem;
+}
+.zona3 .cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    gap: 2rem;
+    
+}
+
+.card{
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    height: auto;
+    width: 25%;
+    border-radius: 5px;
+    box-shadow: 0px 0.5px 1px 0.5px black;
+    transition: 1s ease;
+}
+
+.card:hover{
+    background-color: #8c0f31;
+    color: white !important; 
+    transform: scale(1.1);
+    transition: transform 1s ease;
+}
+.card:hover :nth-child(2){
+    color: white;
+}
+.card:hover :nth-child(3){
+    color: white;
+}
+.card :nth-child(1){
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 10%;
+}
+
+.card :nth-child(2){
+    color: #8c0f31;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+.card :nth-child(3){
+    color: #8c0f31;
+    font-weight: bold;
+    margin-bottom: 10%;
+    font-size: 3rem;
+}
+.card :nth-child(4){
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+.card :nth-child(5){
+    margin-bottom: 10%;
+}
+.card button{
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0.5px rgb(87, 87, 87);
+    color: #8c0f31;
+    background-color: #f2e4d8;
+    margin-bottom: 10%;
+    border: 1px solid #f2e4d8;
+} 
+
+
+/*Seccion 4 Zona4 del formulario*/
+
+
+.zona4{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.zona4 .left{
+    width: 70%;
+    position: relative;
+    line-height: 5em;
+}
+.zona4 .left h3::after{
+    position: absolute;
+    top: 15%;
+    left: 32.5%;
+    height: 1%;
+    content: "";
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: #8c0f31;
+    width: 10%;
+
+}
+.zona4 .left input{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-left: 350px;
+    margin-bottom: 20px;
+    width: 60%;
+    padding: 1%;
+    border: 1px solid #8c0f31;
+}
+
+.zona4 .left textarea{
+   display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-left: 350px;
+    margin-bottom: 20px;
+    width: 60%;
+    padding: 1%;
+    border: 1px solid #8c0f31;
+    resize: none;
+    height: 100px;
+}
+.zona4 .left button{
+    margin-left: 75%;
+    padding: 1%;
+    background-color: #8c0f31;
+    color: white;
+    border-radius: 5px;
+    width: 15%;
+}
+.zona4 .left h3{
+    margin-left: 350px;
+}
+.zona4 .right img{
+    width: 65%;
+}
+
+/*Footer*/
+
+.footer{
+    background-color: #f2e4d8;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+ @media screen and (max-width: 500px) {
+
+    /* --- ZONA 1 (Hero) --- */
+    .zona1 {
+        flex-direction: column; /* Elementos uno debajo del otro */
+        height: auto; /* Altura automática, si no el contenido se sale */
+        gap: 50px; /* Reducimos el hueco gigante de 300px */
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .texto {
+        width: 90%; /* Ocupa casi todo el ancho */
+        margin-left: 0; /* Quitamos el margen izquierdo fijo */
+        align-items: center; /* Centramos textos */
+        text-align: center;
+    }
+
+    .texto h3 {
+        font-size: 2.5em; /* Reducimos la fuente gigante */
+    }
+
+    .texto p {
+        font-size: 1.2em; /* Texto más legible */
+    }
+
+    .imagen1 {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* --- ZONA 1-5 (Botón intermedio) --- */
+    .zona1-5 {
+        margin-left: 0;
+        height: auto;
+        display: flex;
+        justify-content: center; /* Centrar el botón */
+        margin-bottom: 30px;
+    }
+
+    .zona1-5 button {
+        width: 60%; /* Botón más ancho para poder pulsarlo con el dedo */
+        padding: 15px;
+    }
+
+    /* --- ZONA 2 (Galería) --- */
+    .zona2 {
+        width: 95%; /* Aprovechar más pantalla */
+        height: auto; /* Dejar crecer la sección según las fotos */
+        margin-bottom: 50px;
+    }
+
+    .galeria {
+        flex-direction: column; /* Fotos una debajo de otra */
+        gap: 15px;
+    }
+
+    .galeria img {
+        width: 100%; /* Fotos a tamaño completo */
+    }
+    
+    .zona2 h3 {
+        padding-top: 10%; /* Un poco más de aire arriba */
+    }
+
+    /* --- ZONA 3 (Precios) --- */
+    .zona3 {
+        height: auto; /* Importante: auto para que quepan las cartas apiladas */
+        padding-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .zona3 .cards {
+        flex-direction: column; /* Apilar cartas verticalmente */
+        margin-top: 10%;
+        gap: 30px;
+    }
+
+    .card {
+        width: 90%; /* Carta ancha */
+    }
+
+    /* --- ZONA 4 (Formulario) --- */
+    .zona4 {
+        flex-direction: column; /* Poner la imagen debajo o encima del formulario */
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .zona4 .left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar todo */
+    }
+
+    /* Arreglo crítico: Quitamos los márgenes fijos de 350px */
+    .zona4 .left h3,
+    .zona4 .left input {
+        margin-left: 0; 
+        width: 90%; /* Inputs anchos */
+    }
+    .zona4 .left h3::after{
+        content: "";
+        display: none;
+       }
+    .zona4 .left textarea{
+        width: 90%;
+        margin-left: 0;
+    }
+    .zona4 .left h3::after {
+        left: 0; /* Reajustar la línea decorativa o quitarla con display:none */
+        width: 20%;
+        top: 60%; /* Ajuste visual aproximado */
+    }
+    
+    .zona4 .left button {
+        margin-left: 0;
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    /* Ocultamos la imagen de la derecha en móvil para ahorrar espacio */
+    .zona4 .right {
+        display: none; 
+    }
+    
+    /* Para agrandar el 4º input (textarea simulado) */
+    .zona4 .left input:nth-child(4){
+        height: 100px; /* Le damos altura fija */
+    }
+
+    .footer {
+        height: auto;
+        padding: 10px;
+        line-height: normal;
+    }
+}

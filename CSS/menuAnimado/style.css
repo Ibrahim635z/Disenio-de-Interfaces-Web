@@ -1,0 +1,201 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+
+    overflow-x: hidden; 
+
+    
+
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e54b4b; 
+    z-index: -1; 
+    
+    
+    clip-path: polygon(0 0, 35% 0, 35% 100%, 0% 100%);
+}
+/* Botón de menú flotante */
+.menu-circle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #4a5568;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.overlay-menu {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #4DB685; 
+    z-index: 2; 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 0;
+    
+    transform-origin: top right;
+    transform: scale(0); 
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease;
+    border-radius: 0; 
+}
+
+.overlay-menu nav a {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 15px 0;
+    font-family: sans-serif;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2rem;
+    color: #ee0303;
+    background: rgba(0,0,0,0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.menu-circle:hover .overlay-menu {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1); 
+}
+
+/* Opcional: Para ocultar el icono de hamburguesa original cuando se abre el menú */
+.menu-circle:hover > i.fa-bars {
+    opacity: 0;
+}
+/* --- EL CONTENEDOR PRINCIPAL --- */
+.container {
+    width: 70%;         
+    max-width: 1200px;   
+    display: grid;      
+    grid-template-columns: 1fr 1fr; 
+    overflow: hidden;    
+    min-height: 80vh;  
+}
+
+/* --- COLUMNA IZQUIERDA (IMAGEN) --- */
+.img-wrapper {
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper img {
+    width: 70%;  
+    justify-content: center;
+    align-items: center;
+    line-height: 20%;      
+    height: auto;
+    object-fit: cover;
+   
+    
+}
+
+
+
+/* --- COLUMNA DERECHA (TEXTO) --- */
+.texto {
+    padding: 3rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.texto h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #111;
+    line-height: 1.2;
+}
+
+.texto p {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- BOTÓN CON ANIMACIÓN --- */
+.btn {
+    padding: 15px 30px;
+    background-color: #e54b4b; 
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start; 
+    margin-top: 20px;
+    transition: all 0.3s ease; /* Suaviza la animación */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación al pasar el ratón (Hover) */
+.btn:hover {
+    background-color: #333; 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+/* Cuando la pantalla sea menor a 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Cambia a 1 sola columna */
+        width: 95%;
+        margin: 20px auto; /* Centrado con margen arriba/abajo */
+    }
+
+    .img-wrapper {
+        padding: 50px 0; /* Un poco de aire arriba y abajo en móvil */
+        min-height: 300px;
+    }
+    
+    .texto {
+        padding: 2rem;
+    }
+    
+    .texto h3 {
+        font-size: 2rem;
+    }
+}

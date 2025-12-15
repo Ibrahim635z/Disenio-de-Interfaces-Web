@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    position: relative;
+}
+
+.nav{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    right: 2%;
+    font-size: 3rem;
+    gap: 2rem;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    animation: mover 1s ease forwards;
+    transform: translate(-100%);
+    
+    
+}
+
+@keyframes mover{
+    to{
+        transform: translate(0%);
+    }
+}
+
+
+
+.main .left p{
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 15%;
+    font-size: 3rem;
+}
+
+.main .left button{
+    width: 15%;
+    margin-left: 30%;
+    padding: 1%;
+    background-color: purple;
+    color: white;
+}
+.main .right{
+    width: 50%;
+    transform: translateY(100%);
+    animation: mover 1s ease forwards;
+    
+    
+}
+.main .right img{
+    max-height: 100vh;
+    width: 100%;
+    margin-top: 15%;
+
+}
+
+
+/*  seccion 2 */
+
+.seccion2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.seccion2__left{
+    width: 45%;
+    transform-style: preserve-3d;
+    position: relative;
+    height: 45vh;
+
+    transition: all 1s ease;
+
+  
+
+}
+
+.seccion2__left img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    backface-visibility: hidden;
+    
+}
+
+.seccion2__left:hover{
+    transform: rotateY(180deg);
+}
+.front{
+    transform: rotateY(180deg);
+}
+
+.back{
+    transform: rotateY(0);
+}
+
+.seccion__right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.right__txt{
+    border: 1px solid rgba(110, 110, 110, 0.324);
+    margin-bottom: 15%;
+    box-shadow: 0px 0px 3px 0px black;
+    padding: 1%;
+    
+    transition: all 1s ease;
+
+}
+.right__txt p:nth-child(1){
+    color: blue;
+    font-size: 3rem;
+
+    
+}
+
+.right__txt:hover{
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 3px 0px orangered;
+}
+
+.seccion3{
+    margin-top: 15%;
+}
+
+.seccion4{
+    display: grid;
+    padding: 10%;
+    width: 80%;
+    height: 60vh;
+    box-sizing: border-box;
+    margin-left: auto; /* Centra el contenedor de 80% de ancho */
+    margin-right: auto;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,200px);
+    grid-template-areas:
+        "img1 img2 img2"
+        "img1 img3 img3"
+        "img1 img3 img3";
+}
+
+
+.seccion4 .img1{
+    width: 100%;
+    height: 100%; /* ¡CLAVE! Asegura que la imagen llene la altura total de su área de Grid */
+    object-fit: cover;
+    grid-area: img1;
+   
+}
+.seccion4 .img2{
+     width: 100%;
+    height: 100%; /* ¡CLAVE! Asegura que la imagen llene la altura total de su área de Grid */
+    object-fit: cover;
+    grid-area: img2;
+ 
+}
+.seccion4 .img3{
+     width: 100%;
+    height: 100%; /* ¡CLAVE! Asegura que la imagen llene la altura total de su área de Grid */
+    object-fit: cover;
+    grid-area: img3;
+    
+}
