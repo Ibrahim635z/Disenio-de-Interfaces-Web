@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>contenedores</title>
+</head>
+<body>
+    <h1>Hola probando Bootstrap</h1>
+    <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container bg-primary">Container</div>
+    <div class="container-fluid bg-warning">Container-fluid</div>
+    <div class="container-md bg-primary">Container md</div>
+
+    <!-- ****GRID**** -->
+
+    <br><br><br>
+    <h1>Grid en BootStrap</h1>
+    <!-- Hay que poner row para que sepa que es estilo grid, tiene 12 columnas maximo.-->
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsa, provident, temporibus excepturi asperiores quisquam numquam aut ducimus, ab deleniti adipisci consequatur quia vitae minus eaque? Quos officiis sed officia!
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque nostrum temporibus voluptatibus id impedit rem ex ut, maxime quia facere enim eaque delectus, culpa possimus at, corrupti laboriosam corporis assumenda.
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <h1>Columnas por filas</h1>
+    <div class="row row-cols-4">
+        <div class="columna order-5">Columna 1</div>
+        <div class="columna">Columna 2</div>
+        <div class="columna">Columna 3</div>
+        <div class="columna">Columna 4</div>
+        <div class="columna">Columna 5</div>
+        <div class="columna">Columna 6</div>
+    </div>
+    <br><br><br><br>
+
+    <h1>Alineaciones Verticales</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col columna align-self-start">Columna 1</div>
+            <div class="col columna align-self-center">Columna 2</div>
+            <div class="col columna align-self-end">Columna 3</div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="columna col-4">Columna 1</div>
+            <div class="columna col-4">Columna 2</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <h1>Gutters (Espacio entre Columnas)</h1>
+
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-6">
+            <div class="columna">columna 1</div>
+            </div>
+            <div class="col-6">
+            <div class="columna">columna 2</div>
+            </div>
+            <div class="col-6">
+            <div class="columna">columna 3</div>
+            </div>
+            <div class="col-6">
+            <div class="columna">columna 4</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
